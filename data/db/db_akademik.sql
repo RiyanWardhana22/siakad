@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Feb 02, 2021 at 01:41 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 7.4.14
+-- Host: localhost:3306
+-- Generation Time: Nov 13, 2024 at 02:58 AM
+-- Server version: 8.0.30
+-- PHP Version: 8.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `stmik_ids`
+-- Database: `db_akademik`
 --
 
 -- --------------------------------------------------------
@@ -32,7 +32,7 @@ CREATE TABLE `dosen` (
   `nama_dosen` varchar(50) NOT NULL,
   `jenkel_dosen` varchar(10) NOT NULL,
   `alamat_dosen` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `dosen`
@@ -48,17 +48,17 @@ INSERT INTO `dosen` (`nidn`, `nama_dosen`, `jenkel_dosen`, `alamat_dosen`) VALUE
 --
 
 CREATE TABLE `login` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `login`
 --
 
 INSERT INTO `login` (`id`, `username`, `password`) VALUES
-(1, 'admin', '123456');
+(1, 'siakad', 'pw123');
 
 -- --------------------------------------------------------
 
@@ -75,7 +75,7 @@ CREATE TABLE `mahasiswa` (
   `alamat` text NOT NULL,
   `program_studi` varchar(20) NOT NULL,
   `tahun_masuk` varchar(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `mahasiswa`
@@ -93,8 +93,8 @@ INSERT INTO `mahasiswa` (`nim`, `nama`, `jenis_kelamin`, `kota_kelahiran`, `tang
 CREATE TABLE `matakuliah` (
   `kode_matkul` varchar(12) NOT NULL,
   `nama_matkul` varchar(50) NOT NULL,
-  `sks` int(3) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `sks` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `matakuliah`
@@ -110,12 +110,12 @@ INSERT INTO `matakuliah` (`kode_matkul`, `nama_matkul`, `sks`) VALUES
 --
 
 CREATE TABLE `nilai` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `nim` varchar(12) NOT NULL,
   `kode_matkul` varchar(12) NOT NULL,
-  `semester` int(2) NOT NULL,
-  `nilai` int(3) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `semester` int NOT NULL,
+  `nilai` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `nilai`
@@ -166,13 +166,13 @@ ALTER TABLE `nilai`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `nilai`
 --
 ALTER TABLE `nilai`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -10,7 +10,7 @@
     </div>
     <ul class="sidebar-menu">
       <li class="menu-header">Dashboard</li>
-      <li><a class="nav-link" href="../"><i class="fas fa-fire"></i> <span>Home</span></a></li>
+      <li><a class="nav-link" href="../"><i class="bi bi-house-door-fill"></i><span>Home</span></a></li>
       <li class="menu-header">Main Feature</li>
       <li class="dropdown">
         <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Dosen</span></a>

@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
 
             <div class="card card-primary">
               <div class="card-header">
-                <h4>Login Admin</h4>
+                <h4>Login</h4>
               </div>
 
               <div class="card-body">
@@ -88,7 +88,7 @@ if (isset($_POST['submit'])) {
               </div>
             </div>
             <div class="simple-footer">
-              Copyright &copy; Heri Hermawan 2021
+              Copyright &copy; Riyan Wardhana
             </div>
           </div>
         </div>
