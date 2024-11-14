@@ -2,7 +2,7 @@
 require_once '../layout/_top.php';
 require_once '../helper/connection.php';
 
-$prodi = mysqli_query($connection, "SELECT * FROM prodi");
+$prodi = mysqli_query($connection, "SELECT * FROM mahasiswa");
 ?>
 
 <section class="section">
