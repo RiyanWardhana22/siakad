@@ -13,7 +13,7 @@
       <li><a class="nav-link" href="../"><i class="fa fa-home" aria-hidden="true"></i><span>Home</span></a></li>
       <li class="menu-header">Fitur Utama</li>
       <li class="dropdown">
-        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa fa-pencil" aria-hidden="true"></i><span>Registrasi</span></a>
+        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="bi bi-pencil-square"></i><span>Registrasi</span></a>
         <ul class="dropdown-menu">
           <li><a class="nav-link" href="../dosen/index.php">List</a></li>
           <li><a class="nav-link" href="../dosen/create.php">Tambah Data</a></li>
