@@ -1,7 +1,7 @@
 </div>
 <footer class="main-footer">
   <div class="footer-left">
-    Copyright &copy; Riyan Wardhana 2024</a>
+    Copyright &copy; Univ Medan Jaya 2024</a>
   </div>
   <div class="footer-right">
 

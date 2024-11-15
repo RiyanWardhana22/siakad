@@ -5,8 +5,9 @@ require_once '../helper/connection.php';
 $kode_matkul = $_POST['kode_matkul'];
 $nama_matkul = $_POST['nama_matkul'];
 $sks = $_POST['sks'];
+$sks = $_POST['semester'];
 
-$query = mysqli_query($connection, "UPDATE matakuliah SET nama_matkul = '$nama_matkul', sks = '$sks' WHERE kode_matkul = '$kode_matkul'");
+$query = mysqli_query($connection, "UPDATE matakuliah SET nama_matkul = '$nama_matkul', sks = '$sks', semester = '$semester' WHERE kode_matkul = '$kode_matkul'");
 if ($query) {
   $_SESSION['info'] = [
     'status' => 'success',

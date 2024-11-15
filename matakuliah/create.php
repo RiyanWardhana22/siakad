@@ -28,6 +28,10 @@ require_once '../helper/connection.php';
                 <td><input class="form-control" type="number" max="6" name="sks"></td>
               </tr>
               <tr>
+                <td>Semester</td>
+                <td><input class="form-control" type="number" max="14" name="semester"></td>
+              </tr>
+              <tr>
                 <td>
                   <input class="btn btn-primary" type="submit" name="proses" value="Simpan">
                   <input class="btn btn-danger" type="reset" name="batal" value="Bersihkan">
