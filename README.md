@@ -16,11 +16,9 @@
     |
     ├── dashboard              # Halaman dashboard.
     |
-    ├── data                   # File berisi db dan screenshoot demo.
+    ├── database               # File berisi database mysql
     |
-    ├── dosen                  # Halaman managemen dosen.
-    |
-    ├── helper                 # File untuk koneksi ke db dan autentikasi login user.
+    ├── helper                 # File untuk koneksi ke database dan autentikasi login user.
     |
     ├── layout                 # Template side, botton, top bar.
     |
@@ -28,9 +26,11 @@
     |
     ├── matakuliah             # Halaman managemen mata kuliah.
     |
-    └── nilai                  # Halaman managemen nilai.
+    ├── nilai                  # Halaman managemen Kartu hasil studi(KHS).
+    |
+    └── registrasi             # Halaman managemen mata kuliah yang ditawarkan.
 
 ## Login
 
-Email: siakad
-Password : pw123
+- Email: siakad
+- Password : pw123
