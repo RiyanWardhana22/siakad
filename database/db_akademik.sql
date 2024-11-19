@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 13, 2024 at 02:58 AM
+-- Generation Time: Nov 19, 2024 at 03:41 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.3.12
 
@@ -40,6 +40,21 @@ CREATE TABLE `dosen` (
 
 INSERT INTO `dosen` (`nidn`, `nama_dosen`, `jenkel_dosen`, `alamat_dosen`) VALUES
 ('100001', 'Heri Hermawan', 'Pria', 'Entah');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `khs`
+--
+
+CREATE TABLE `khs` (
+  `id` int NOT NULL,
+  `kode_matakuliah` varchar(10) NOT NULL,
+  `nama_matakuliah` varchar(100) NOT NULL,
+  `kelas` varchar(10) NOT NULL,
+  `sks` int NOT NULL,
+  `grade` enum('A','B','C','E') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -93,15 +108,17 @@ INSERT INTO `mahasiswa` (`nim`, `nama`, `jenis_kelamin`, `kota_kelahiran`, `tang
 CREATE TABLE `matakuliah` (
   `kode_matkul` varchar(12) NOT NULL,
   `nama_matkul` varchar(50) NOT NULL,
-  `sks` int NOT NULL
+  `sks` int NOT NULL,
+  `semester` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `matakuliah`
 --
 
-INSERT INTO `matakuliah` (`kode_matkul`, `nama_matkul`, `sks`) VALUES
-('111', 'Pemrograman Web Dasar', 3);
+INSERT INTO `matakuliah` (`kode_matkul`, `nama_matkul`, `sks`, `semester`) VALUES
+('3KOM40114', 'ORGANISASI DAN ARSITEKTUR KOMPUTER', 3, 3),
+('3KOM40115', 'PEMROGRAMAN WEB', 3, 2);
 
 -- --------------------------------------------------------
 
@@ -135,6 +152,12 @@ ALTER TABLE `dosen`
   ADD PRIMARY KEY (`nidn`);
 
 --
+-- Indexes for table `khs`
+--
+ALTER TABLE `khs`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `login`
 --
 ALTER TABLE `login`
@@ -161,6 +184,12 @@ ALTER TABLE `nilai`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `khs`
+--
+ALTER TABLE `khs`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `login`

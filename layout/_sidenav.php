@@ -26,18 +26,17 @@
           <!-- <li><a class="nav-link" href="../mahasiswa/create.php">Tambah Data</a></li> -->
         </ul>
       </li>
-      <li class="dropdown">
+      <!-- <li class="dropdown">
         <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa fa-id-card"></i><span>Registrasi</span></a>
         <ul class="dropdown-menu">
           <li><a class="nav-link" href="../registrasi/">List</a></li>
-          <!-- <li><a class="nav-link" href="../registrasi/create.php">Tambah Data</a></li> -->
+          <li><a class="nav-link" href="../registrasi/create.php">Tambah Data</a></li>
         </ul>
-      </li>
+      </li> -->
       <li class="dropdown">
-        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Nilai</span></a>
+        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa-solid fa-file"></i> <span>Ujian dan Nilai</span></a>
         <ul class="dropdown-menu">
-          <li><a class="nav-link" href="../nilai/index.php">List</a></li>
-          <!-- <li><a class="nav-link" href="../nilai/create.php">Tambah Data</a></li> -->
+          <li><a class="nav-link" href="../nilai/index.php">Kartu Hasil Studi(KHS)</a></li>
         </ul>
       </li>
     </ul>

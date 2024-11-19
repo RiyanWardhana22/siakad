@@ -2,12 +2,12 @@
 require_once '../layout/_top.php';
 require_once '../helper/connection.php';
 
-$result = mysqli_query($connection, "SELECT * FROM nilai");
+$result = mysqli_query($connection, "SELECT * FROM khs");
 ?>
 
 <section class="section">
   <div class="section-header d-flex justify-content-between">
-    <h1>Nilai</h1>
+    <h1>Data KHS (Kartu Hasil Studi)</h1>
     <a href="./create.php" class="btn btn-primary">Tambah Data</a>
   </div>
   <div class="row">
@@ -19,10 +19,11 @@ $result = mysqli_query($connection, "SELECT * FROM nilai");
               <thead>
                 <tr class="text-center">
                   <th>No</th>
-                  <th>NIM</th>
                   <th>Kode Mata Kuliah</th>
-                  <th>Semester</th>
-                  <th>Nilai</th>
+                  <th>Nama Mata Kuliah</th>
+                  <th>Kelas</th>
+                  <th>SKS</th>
+                  <th>Grade</th>
                   <th style="width: 150">Aksi</th>
                 </tr>
               </thead>
@@ -35,10 +36,11 @@ $result = mysqli_query($connection, "SELECT * FROM nilai");
                   <input type="hidden" name="id" value="<?= $row['id'] ?>">
                   <tr class="text-center">
                     <td><?= $no ?></td>
-                    <td><?= $data['nim'] ?></td>
-                    <td><?= $data['kode_matkul'] ?></td>
-                    <td><?= $data['semester'] ?></td>
-                    <td><?= $data['nilai'] ?></td>
+                    <td><?= $data['kode_matakuliah'] ?></td>
+                    <td><?= $data['nama_matakuliah'] ?></td>
+                    <td><?= $data['kelas'] ?></td>
+                    <td><?= $data['sks'] ?></td>
+                    <td><?= $data['grade'] ?></td>
                     <td>
                       <a class="btn btn-sm btn-danger mb-md-0 mb-1" href="delete.php?id=<?= $data['id'] ?>">
                         <i class="fas fa-trash fa-fw"></i>
