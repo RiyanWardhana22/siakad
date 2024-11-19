@@ -15,7 +15,7 @@
       <li class="dropdown">
         <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-pencil-alt"></i> <span>Registrasi</span></a>
         <ul class="dropdown-menu">
-          <li><a class="nav-link" href="../matakuliah/">Mata Kuliah Ditawarkan</a></li>
+          <li><a class="nav-link" href="../matakuliah/">◉ Mata Kuliah Ditawarkan</a></li>
           <!-- <li><a class="nav-link" href="../matakuliah/create.php">Tambah Data</a></li> -->
         </ul>
       </li>
@@ -36,7 +36,7 @@
       <li class="dropdown">
         <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa fa-file" aria-hidden="true"></i> <span>Ujian dan Nilai</span></a>
         <ul class="dropdown-menu">
-          <li><a class="nav-link" href="../nilai/index.php">Kartu Hasil Studi(KHS)</a></li>
+          <li><a class="nav-link" href="../nilai/index.php">◉ Kartu Hasil Studi(KHS)</a></li>
         </ul>
       </li>
     </ul>
