@@ -34,7 +34,7 @@
         </ul>
       </li> -->
       <li class="dropdown">
-        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa-solid fa-file"></i> <span>Ujian dan Nilai</span></a>
+        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa fa-file" aria-hidden="true"></i> <span>Ujian dan Nilai</span></a>
         <ul class="dropdown-menu">
           <li><a class="nav-link" href="../nilai/index.php">Kartu Hasil Studi(KHS)</a></li>
         </ul>
