@@ -19,25 +19,25 @@ $total_nilai = mysqli_fetch_array($nilai)[0];
   </div>
   <div class="column">
     <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+      <div class="col-lg-5 col-md-6 col-sm-6 col-12">
         <div class="card card-statistic-1">
-          <a href="../dosen/">
+          <a href="../matakuliah/">
           <div class="card-icon bg-primary">
-            <i class="far fa-user"></i>
+            <i class="far fa-file"></i>
           </div>
           <div class="card-wrap">
             <div class="card-header">
-              <h4>Total Dosen</h4>
+              <h4>Mata Kuliah Ditawarkan</h4>
             </div>
             <div class="card-body">
-              <?= $total_dosen ?>
+              <?= $total_matakuliah ?>
             </div>
           </div>
         </div>
       </a>
       </div>
       <a href="../mahasiswa/">
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+      <div class="col-lg-5 col-md-6 col-sm-6 col-12">
         <div class="card card-statistic-1">
           <div class="card-icon bg-danger">
             <i class="far fa-user"></i>
@@ -56,7 +56,7 @@ $total_nilai = mysqli_fetch_array($nilai)[0];
     </div>
     <div class="row">
       <a href="../matakuliah/">
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="col-lg-5 col-md-6 col-sm-6 col-12">
           <div class="card card-statistic-1">
             <div class="card-icon bg-warning">
               <i class="far fa-file"></i>
@@ -73,14 +73,14 @@ $total_nilai = mysqli_fetch_array($nilai)[0];
         </a>
         </div>
         <a href="../nilai/">
-          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+          <div class="col-lg-5 col-md-6 col-sm-6 col-12">
             <div class="card card-statistic-1">
               <div class="card-icon bg-success">
                 <i class="far fa-newspaper"></i>
               </div>
               <div class="card-wrap">
                 <div class="card-header">
-                  <h4>Total Nilai Masuk</h4>
+                  <h4>Kartu Hasil Studi</h4>
                 </div>
               <div class="card-body">
                   <?= $total_nilai ?>

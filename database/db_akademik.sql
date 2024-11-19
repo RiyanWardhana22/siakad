@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 19, 2024 at 03:41 AM
+-- Generation Time: Nov 19, 2024 at 06:02 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.3.12
 
@@ -24,26 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dosen`
---
-
-CREATE TABLE `dosen` (
-  `nidn` varchar(12) NOT NULL,
-  `nama_dosen` varchar(50) NOT NULL,
-  `jenkel_dosen` varchar(10) NOT NULL,
-  `alamat_dosen` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `dosen`
---
-
-INSERT INTO `dosen` (`nidn`, `nama_dosen`, `jenkel_dosen`, `alamat_dosen`) VALUES
-('100001', 'Heri Hermawan', 'Pria', 'Entah');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `khs`
 --
 
@@ -55,6 +35,13 @@ CREATE TABLE `khs` (
   `sks` int NOT NULL,
   `grade` enum('A','B','C','E') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `khs`
+--
+
+INSERT INTO `khs` (`id`, `kode_matakuliah`, `nama_matakuliah`, `kelas`, `sks`, `grade`) VALUES
+(8, '3KOM40114', 'ORGANISASI DAN ARSITEKTUR KOMPUTER', 'PSIK 23 B', 3, 'A');
 
 -- --------------------------------------------------------
 
@@ -120,36 +107,9 @@ INSERT INTO `matakuliah` (`kode_matkul`, `nama_matkul`, `sks`, `semester`) VALUE
 ('3KOM40114', 'ORGANISASI DAN ARSITEKTUR KOMPUTER', 3, 3),
 ('3KOM40115', 'PEMROGRAMAN WEB', 3, 2);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `nilai`
---
-
-CREATE TABLE `nilai` (
-  `id` int NOT NULL,
-  `nim` varchar(12) NOT NULL,
-  `kode_matkul` varchar(12) NOT NULL,
-  `semester` int NOT NULL,
-  `nilai` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `nilai`
---
-
-INSERT INTO `nilai` (`id`, `nim`, `kode_matkul`, `semester`, `nilai`) VALUES
-(5, '1911010001', '111', 3, 90);
-
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `dosen`
---
-ALTER TABLE `dosen`
-  ADD PRIMARY KEY (`nidn`);
 
 --
 -- Indexes for table `khs`
@@ -176,12 +136,6 @@ ALTER TABLE `matakuliah`
   ADD PRIMARY KEY (`kode_matkul`);
 
 --
--- Indexes for table `nilai`
---
-ALTER TABLE `nilai`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -189,19 +143,13 @@ ALTER TABLE `nilai`
 -- AUTO_INCREMENT for table `khs`
 --
 ALTER TABLE `khs`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `nilai`
---
-ALTER TABLE `nilai`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
