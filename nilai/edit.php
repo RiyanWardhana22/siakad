@@ -3,7 +3,7 @@ require_once '../layout/_top.php';
 require_once '../helper/connection.php';
 
 $id = $_GET['id'];
-$query = mysqli_query($connection, "SELECT * FROM nilai WHERE id='$id'");
+$query = mysqli_query($connection, "SELECT * FROM khs WHERE id='$id'");
 $mahasiswa = mysqli_query($connection, "SELECT nim,nama FROM mahasiswa");
 $matkul = mysqli_query($connection, "SELECT kode_matkul,nama_matkul FROM matakuliah");
 ?>

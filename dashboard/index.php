@@ -13,7 +13,7 @@ $total_matakuliah = mysqli_fetch_array($matakuliah)[0];
 $total_nilai = mysqli_fetch_array($nilai)[0];
 ?>
 
-<section class="section">
+<section class="section ">
   <div class="section-header">
     <h1>Dashboard</h1>
   </div>
