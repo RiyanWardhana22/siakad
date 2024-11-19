@@ -2,8 +2,8 @@
 require_once '../layout/_top.php';
 require_once '../helper/connection.php';
 
-$mahasiswa = mysqli_query($connection, "SELECT nim,nama FROM matakuliah");
-$matkul = mysqli_query($connection, "SELECT kode_matkul,nama_matkul FROM matakuliah");
+// $mahasiswa = mysqli_query($connection, "SELECT nim,nama FROM matakuliah");
+$matkul = mysqli_query($connection, "SELECT nama_matkul FROM matakuliah");
 ?>
 
 <section class="section">
@@ -20,17 +20,17 @@ $matkul = mysqli_query($connection, "SELECT kode_matkul,nama_matkul FROM matakul
             <table cellpadding="8" class="w-100">
               <tr>
                 <td>Kode Mata Kuliah</td>
-                <td><input class="form-control" type="text" name="kode_matkul" required></td>
+                <td><input class="form-control" type="text" name="kode_matakuliah" required></td>
               </tr>
               <tr>
                 <td>Mata Kuliah</td>
                 <td>
-                  <select class="form-control" name="matkul" id="matkul" required>
+                  <select class="form-control" name="nama_matakuliah" id="matkul" required>
                     <option value="">--Pilih Matakuliah--</option>
                     <?php
                     while ($r = mysqli_fetch_array($matkul)) :
                     ?>
-                      <option value="<?= $r['kode_matkul'] ?>"><?= $r['nama_matkul'] ?></option>
+                      <option value="<?= $r['nama_matkul'] ?>"><?= $r['nama_matkul'] ?></option>
                     <?php
                     endwhile;
                     ?>
