@@ -25,7 +25,6 @@ $result = mysqli_query($connection, "SELECT * FROM krs");
                   <th>Hari</th>
                   <th>Jam </th>
                   <th>Ruang</th>
-                  <th style="width: 150">Aksi</th>
                 </tr>
               </thead>
               <tbody>
@@ -33,6 +32,7 @@ $result = mysqli_query($connection, "SELECT * FROM krs");
                 while ($data = mysqli_fetch_array($result)) :
                 ?>
 
+                  <input type="hidden" name="id" value="<?= $row['id'] ?>">
                   <tr>
                     <td><?= $data['matkul'] ?></td>
                     <td><?= $data['kelas'] ?></td>
@@ -40,16 +40,7 @@ $result = mysqli_query($connection, "SELECT * FROM krs");
                     <td><?= $data['hari'] ?></td>
                     <td><?= $data['jam'] ?></td>
                     <td><?= $data['ruang'] ?></td>
-                    <td>
-                      <a class="btn btn-sm btn-danger mb-md-0 mb-1" href="delete.php?nim=<?= $data['nim'] ?>">
-                        <i class="fas fa-trash fa-fw"></i>
-                      </a>
-                      <a class="btn btn-sm btn-info" href="edit.php?nim=<?= $data['nim'] ?>">
-                        <i class="fas fa-edit fa-fw"></i>
-                      </a>
-                    </td>
                   </tr>
-
                 <?php
                 endwhile;
                 ?>

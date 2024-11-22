@@ -9,7 +9,7 @@ $hari = $_POST['hari'];
 $jam = $_POST['jam'];
 $ruang = $_POST['ruang'];
 
-$query = mysqli_query($connection, "insert into mahasiswa (matkul, kelas, sks, hari, jam, ruang) value('$matkul', '$kelas', '$sks', '$hari', '$jam', '$ruang')");
+$query = mysqli_query($connection, "insert into krs (matkul, kelas, sks, hari, jam, ruang) value('$matkul', '$kelas', '$sks', '$hari', '$jam', '$ruang')");
 if ($query) {
   $_SESSION['info'] = [
     'status' => 'success',
