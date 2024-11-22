@@ -2,12 +2,12 @@
 require_once '../layout/_top.php';
 require_once '../helper/connection.php';
 
-$result = mysqli_query($connection, "SELECT * FROM mahasiswa");
+$result = mysqli_query($connection, "SELECT * FROM krs");
 ?>
 
 <section class="section">
   <div class="section-header d-flex justify-content-between">
-    <h1>List Mahasiswa</h1>
+    <h1>Data KRS (Kartu Rencana Studi)</h1>
     <a href="./create.php" class="btn btn-primary">Tambah Data</a>
   </div>
   <div class="row">
@@ -16,16 +16,15 @@ $result = mysqli_query($connection, "SELECT * FROM mahasiswa");
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-hover table-striped w-100" id="table-1">
+              <h4>MataKuliah dan Kelas Yang Diambil</h4>
               <thead>
                 <tr class="text-center">
-                  <th>NIM</th>
-                  <th>Nama</th>
-                  <th>Jenis Kelamin</th>
-                  <th>Kota Kelahiran</th>
-                  <th>Tanggal Lahir</th>
-                  <th>Alamat</th>
-                  <th>Program Studi</th>
-                  <th>Tahun Masuk</th>
+                  <th>MataKuliah</th>
+                  <th>Kelas</th>
+                  <th>SKS</th>
+                  <th>Hari</th>
+                  <th>Jam </th>
+                  <th>Ruang</th>
                   <th style="width: 150">Aksi</th>
                 </tr>
               </thead>
@@ -35,14 +34,12 @@ $result = mysqli_query($connection, "SELECT * FROM mahasiswa");
                 ?>
 
                   <tr>
-                    <td><?= $data['nim'] ?></td>
-                    <td><?= $data['nama'] ?></td>
-                    <td><?= $data['jenis_kelamin'] ?></td>
-                    <td><?= $data['kota_kelahiran'] ?></td>
-                    <td><?= $data['tanggal_kelahiran'] ?></td>
-                    <td><?= $data['alamat'] ?></td>
-                    <td><?= $data['program_studi'] ?></td>
-                    <td><?= $data['tahun_masuk'] ?></td>
+                    <td><?= $data['matkul'] ?></td>
+                    <td><?= $data['kelas'] ?></td>
+                    <td><?= $data['sks'] ?></td>
+                    <td><?= $data['hari'] ?></td>
+                    <td><?= $data['jam'] ?></td>
+                    <td><?= $data['ruang'] ?></td>
                     <td>
                       <a class="btn btn-sm btn-danger mb-md-0 mb-1" href="delete.php?nim=<?= $data['nim'] ?>">
                         <i class="fas fa-trash fa-fw"></i>

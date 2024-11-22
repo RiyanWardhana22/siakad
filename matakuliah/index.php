@@ -7,7 +7,7 @@ $result = mysqli_query($connection, "SELECT * FROM matakuliah");
 
 <section class="section">
   <div class="section-header d-flex justify-content-between">
-    <h1>List Mata Kuliah</h1>
+    <h1>Mata Kuliah Ditawarkan</h1>
     <a href="./create.php" class="btn btn-primary">Tambah Data</a>
   </div>
   <div class="row">
@@ -16,6 +16,7 @@ $result = mysqli_query($connection, "SELECT * FROM matakuliah");
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-hover table-striped w-100" id="table-1">
+              <h4>Prodi - ILMU KOMPUTER</h4>
               <thead>
                 <tr class="text-center">
                   <th>No</th>

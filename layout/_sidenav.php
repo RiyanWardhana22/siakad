@@ -22,17 +22,10 @@
       <li class="dropdown">
         <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa fa-id-card"></i><span>Perkuliahan</span></a>
         <ul class="dropdown-menu">
-          <li><a class="nav-link" href="../mahasiswa/">List</a></li>
+          <li><a class="nav-link" href="../krs/">◉ Kartu Rencana Studi</a></li>
           <!-- <li><a class="nav-link" href="../mahasiswa/create.php">Tambah Data</a></li> -->
         </ul>
       </li>
-      <!-- <li class="dropdown">
-        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa fa-id-card"></i><span>Registrasi</span></a>
-        <ul class="dropdown-menu">
-          <li><a class="nav-link" href="../registrasi/">List</a></li>
-          <li><a class="nav-link" href="../registrasi/create.php">Tambah Data</a></li>
-        </ul>
-      </li> -->
       <li class="dropdown">
         <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa fa-file" aria-hidden="true"></i> <span>Ujian dan Nilai</span></a>
         <ul class="dropdown-menu">
