@@ -3,9 +3,9 @@
 ## Features
 
 - Login
-- Tambah/Edit/Hapus Dosen
-- Tambah/Edit/Hapus Mahasiswa
-- Tambah/Edit/Hapus Mata Kuliah
+- Halaman Dashboard
+- Tambah/Edit/Hapus Mata Kuliah Yang Ditawarkan
+- Tambah Data KRS
 - Tambah/Edit/Hapus Nilai Mata Kuliah
 
 ## 📁 Direktori
@@ -22,7 +22,7 @@
     |
     ├── layout                 # Template side, botton, top bar.
     |
-    ├── mahasiswa              # Halaman managemen mahasiswa.
+    ├── krs                    # Halaman managemen KRS(Kartu Rencana Studi).
     |
     ├── matakuliah             # Halaman managemen mata kuliah.
     |
